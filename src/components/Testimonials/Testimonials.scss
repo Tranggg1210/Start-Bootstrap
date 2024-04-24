@@ -1,0 +1,55 @@
+@use '../../styles/variables' as variables;
+@use '../../styles/mixins' as mixins;
+.testimonials{
+    background-color: variables.$gray-color;
+    padding: 7rem 0;
+    h1{
+        text-align: center;
+        font-size: 1.75rem;
+        margin: 0 0 3rem;
+    }
+    .testimonials-container{
+        @include mixins.flex(space-between);
+        @include mixins.mobile{
+            flex-direction: column;
+        }
+        @include mixins.small-tablet{
+            flex-direction: column;
+        }
+    }
+    @include mixins.mobile{
+        padding: 4rem 0rem;
+    }
+
+}
+.testimonial-item{
+    width: 33%;
+    padding: 0 4rem;
+    @include mixins.mobile{
+        padding: 0 1rem 2.5rem;
+        width: 100%;
+    }
+    @include mixins.small-tablet{
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .avatar{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 1px 1px 5px 0 #adb5bd;
+        margin: 0 auto;
+        img{
+            width: 100%;
+            object-position: center;
+        }
+    }
+    h3{
+        text-align: center;
+        margin: 1.25rem 0 0.5rem;
+    }
+    p{
+        text-align: center;
+    }
+}

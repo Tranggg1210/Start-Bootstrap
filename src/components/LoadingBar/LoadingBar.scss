@@ -1,0 +1,19 @@
+@use '../../styles/variables' as variables;
+.loading-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.24rem;
+    width: 0;
+    background-color: variables.$primary-color;
+    animation: loading 2s linear 1 forwards 1s;
+}
+@keyframes loading{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
