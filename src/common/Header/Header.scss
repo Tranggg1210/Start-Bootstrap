@@ -1,75 +1,75 @@
 @use '../../styles/variables' as variables;
 @use '../../styles/mixins' as mixins;
 
-.header{
-    background-color:variables.$white-color ;
-    padding: 0.75rem 0;
-    box-shadow: 0 0 12px rgba(0 0 0/10%);
-    .width-page{
-        @include mixins.flex(space-between);
+.header {
+  background-color: variables.$white-color;
+  padding: 0.75rem 0;
+  box-shadow: 0 0 12px rgba(0 0 0/10%);
+  .width-page {
+    @include mixins.flex(space-between);
+  }
+  h1 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  .user {
+    @include mixins.flex(space-between);
+    height: 3rem;
+    p {
+      color: variables.$black-color;
+      margin: 0 0 0 0.5rem;
     }
-    h1{
-        font-size: 1.125rem;
-        font-weight: 400;
-        letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      .drop-down {
+        display: block;
+      }
     }
-    .user{
-        @include mixins.flex(space-between);
-        height: 3rem;
-        p{
-            color: variables.$black-color;
-            margin: 0 0 0 0.5rem ;
-        }
-        cursor: pointer;
-        position: relative;
-        &:hover{
-            .drop-down{
-                display: block;
-            }
-        }
+  }
+  .user-avatar {
+    width: 2.25rem;
+    height: 2.23rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
     }
-    .user-avatar{
-        width: 2.25rem;
-        height: 2.23rem;
-        border-radius: 50%;
-        overflow: hidden;
-        img{
-            width: 100%;
+  }
+  .drop-down {
+    min-width: 6rem;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    display: none;
+    background-color: variables.$white-color;
+    box-shadow: 1px 1px 12px rgba(0 0 0/10%);
+    border-top: 0.25rem solid variables.$primary-color;
+    li {
+      padding: 1rem 1.25rem;
+      &:hover {
+        background-color: variables.$primary-color;
+        color: variables.$white-color;
+        a {
+          color: variables.$white-color;
         }
+      }
     }
-    .drop-down{
-        min-width: 6rem;
-        position: absolute;
-        top: 3rem;
-        left: 0;
-        right: 0;
-        z-index: 8;
-        display: none;
-        background-color: variables.$white-color;
-        box-shadow: 1px 1px 12px rgba(0 0 0/10%);
-        border-top: 0.25rem solid variables.$primary-color;
-        li{
-            padding: 1rem 1.25rem;
-            &:hover{
-                background-color: variables.$primary-color;
-                color: variables.$white-color;
-                a{
-                    color: variables.$white-color;
-                }
-            }
-        }
-        &::before {
-            content: ' ';
-            transition: all ease 2s;
-            height: 0;
-            width: 0;
-            position: absolute;
-            top: -14px;
-            left: 46%;
-            right: 20px;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-            border-bottom: 14px solid variables.$primary-color;
-        }
+    &::before {
+      content: ' ';
+      transition: all ease 2s;
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: -14px;
+      left: 46%;
+      right: 20px;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 14px solid variables.$primary-color;
     }
+  }
 }

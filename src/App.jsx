@@ -9,67 +9,64 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import Contact from './pages/Contact/Contact'
 import NotFound from './pages/NotFound/NotFound'
 
-
 function App() {
   const router = useRoutes([
     {
       path: '/',
-      element: <MainLayout/>,
-      children: [
-        {
-          path: "",
-          element: <Home/>
-        }
-      ]
-    },
-    {
-      path:'/login',
-      element: <Auth/>,
+      element: <MainLayout />,
       children: [
         {
           path: '',
-          element: <Login/>
-        }
-      ]
+          element: <Home />,
+        },
+      ],
     },
     {
-      path:'/register',
-      element: <Auth/>,
+      path: '/login',
+      element: <Auth />,
       children: [
         {
           path: '',
-          element: <Register/>
-        }
-      ]
+          element: <Login />,
+        },
+      ],
     },
     {
-      path:'/about-us',
-      element: <MainLayout/>,
+      path: '/register',
+      element: <Auth />,
       children: [
         {
           path: '',
-          element: <AboutUs/>
-        }
-      ]
+          element: <Register />,
+        },
+      ],
     },
     {
-      path:'/contact',
-      element: <MainLayout/>,
+      path: '/about-us',
+      element: <MainLayout />,
       children: [
         {
           path: '',
-          element: <Contact/>
-        }
-      ]
+          element: <AboutUs />,
+        },
+      ],
+    },
+    {
+      path: '/contact',
+      element: <MainLayout />,
+      children: [
+        {
+          path: '',
+          element: <Contact />,
+        },
+      ],
     },
     {
       path: '*',
-      element:<NotFound/>
-    }
+      element: <NotFound />,
+    },
   ])
-  return (
-    router
-  )
+  return router
 }
 
 export default App

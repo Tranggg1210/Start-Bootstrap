@@ -1,32 +1,38 @@
 @use './variables' as variables;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 16px;
-    width: 100vw;
-    overflow-x: hidden;
+html {
+  font-size: 16px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-body{
-    background-color: variables.$white-color;
-    font-family: variables.$primary-font;
-    scroll-behavior: smooth;
+body {
+  background-color: variables.$white-color;
+  font-family: variables.$primary-font;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p{
-    line-height: 1.5;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.5;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
-    color: variables.$black-color;
+a {
+  text-decoration: none;
+  color: variables.$black-color;
 }

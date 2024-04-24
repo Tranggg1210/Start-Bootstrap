@@ -1,12 +1,12 @@
 @use '../../styles/variables' as variables;
 @use '../../styles/mixins' as mixins;
 
-.not-found{
-    @include mixins.flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-    img{
-        width: 30%;
-    }
+.not-found {
+  @include mixins.flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  img {
+    width: 30%;
+  }
 }

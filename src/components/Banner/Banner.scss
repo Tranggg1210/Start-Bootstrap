@@ -2,41 +2,41 @@
 @use '../../styles/mixins' as mixins;
 
 .banner {
-    height: 84vh;
-    background: url('../../assets/images/bg-masthead.jpg') no-repeat;
-    background-size: auto;
-    background-position: center;
-    text-align: center;
+  height: 84vh;
+  background: url('../../assets/images/bg-masthead.jpg') no-repeat;
+  background-size: auto;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  h1 {
+    font-size: 3rem;
+    color: variables.$white-color;
     position: relative;
-    h1{
-        font-size: 3rem;
-        color: variables.$white-color;
-        position: relative;
-        z-index: 8;
-        width: 72%;
-        margin: 0 auto 1.25rem;
-        @include mixins.mobile{
-            font-size: 2rem;
-        }
+    z-index: 8;
+    width: 72%;
+    margin: 0 auto 1.25rem;
+    @include mixins.mobile {
+      font-size: 2rem;
     }
+  }
 
-    &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #1c375e;
-        opacity: 0.5;
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c375e;
+    opacity: 0.5;
+  }
 }
-.banner-sign-up{
-    height: 50vh;
-    h1{
-        font-size: 2rem;
-    }
-    @include mixins.mobile{
-        height: 60vh;
-    }
+.banner-sign-up {
+  height: 50vh;
+  h1 {
+    font-size: 2rem;
+  }
+  @include mixins.mobile {
+    height: 60vh;
+  }
 }

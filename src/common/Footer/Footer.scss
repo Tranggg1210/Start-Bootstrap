@@ -1,47 +1,51 @@
 @use '../../styles/variables' as variables;
 @use '../../styles/mixins' as mixins;
 
-.footer{
-    padding: 3rem 0 2rem;
-    .width-page{
-        @include mixins.mobile{
-            flex-direction: column;
-        }
-        @include mixins.small-tablet{
-            flex-direction: column;
-        }
+.footer {
+  padding: 3rem 0 2rem;
+  .width-page {
+    @include mixins.mobile {
+      flex-direction: column;
     }
-    &-nav, &-socials, .width-page{
-        @include mixins.flex(space-between);
+    @include mixins.small-tablet {
+      flex-direction: column;
     }
-    i,li,p{
-        padding: 0 1rem;
-        text-wrap: nowrap;
-        @include mixins.mobile{
-            padding: 0.5rem;
-        }
+  }
+  &-nav,
+  &-socials,
+  .width-page {
+    @include mixins.flex(space-between);
+  }
+  i,
+  li,
+  p {
+    padding: 0 1rem;
+    text-wrap: nowrap;
+    @include mixins.mobile {
+      padding: 0.5rem;
     }
-    a{
-        color: variables.$primary-color;
-        text-decoration: underline;
-        transition: all 0.3s linear;
-        &:hover{
-            opacity: 0.8;
-        }
+  }
+  a {
+    color: variables.$primary-color;
+    text-decoration: underline;
+    transition: all 0.3s linear;
+    &:hover {
+      opacity: 0.8;
     }
-    p{
-        font-size: 1rem;
-        text-align: left;
-        margin: 1rem 0;
-    }
+  }
+  p {
+    font-size: 1rem;
+    text-align: left;
+    margin: 1rem 0;
+  }
 
-    i{
-        font-size: 1.5rem;
-        color: variables.$primary-color;
-        transition: all 0.3s linear;
-        cursor: pointer;
-        &:hover{
-            opacity: 0.8;
-        }
+  i {
+    font-size: 1.5rem;
+    color: variables.$primary-color;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
     }
+  }
 }

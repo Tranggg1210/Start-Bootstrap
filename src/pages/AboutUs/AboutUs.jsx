@@ -5,8 +5,8 @@ import Testimonials from '../../components/Testimonials/Testimonials'
 function AboutUs() {
   return (
     <div>
-      <Banner title={"About us"}/>
-      <Testimonials/>
+      <Banner title={'About us'} />
+      <Testimonials />
     </div>
   )
 }
